@@ -21,9 +21,6 @@ import { CompleteModule } from './complete/complete.module';
     BrowserModule,
     DashboardModule,
     AppRoutingModule,
-    TaskModule,
-    ProgressModule,
-    CompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

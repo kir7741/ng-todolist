@@ -7,6 +7,6 @@ export const appRoutePath = {
   login: 'login',
 
   // 首頁
-  dashboard: 'dashboard'
+  dashboard: ''
 
 };

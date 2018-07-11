@@ -5,12 +5,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 // Const
-import { appRoutePath } from './app-routing-path.const';
+import { appRoutePath } from './app-route-path.const';
+import { dashboardRoutePath } from './constants/dashboard-route-path.const';
 
+// 沒有定義的route，全部導回dashboard
 const routes: Routes = [
-  { path: '', redirectTo: '/' + appRoutePath.dashboard, pathMatch: 'full' },
-  { path: appRoutePath.dashboard, component: DashboardComponent },
-  { path: '**', redirectTo:  '/' + appRoutePath.dashboard, pathMatch: 'full'}
+  {
+    path: '**',
+    redirectTo: appRoutePath.dashboard + '/' + dashboardRoutePath.task,
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
