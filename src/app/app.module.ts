@@ -1,11 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { DashboardModule } from './dashboard/dashboard.module';
+// Route Module
 import { AppRoutingModule } from './app-routing.module';
 
+// Page Module
+import { DashboardModule } from './dashboard/dashboard.module';
+import { TaskModule } from './task/task.module';
 
+// Root Component
+import { AppComponent } from './app.component';
+import { ProgressModule } from './progress/progress.module';
+import { CompleteModule } from './complete/complete.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +20,10 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     DashboardModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TaskModule,
+    ProgressModule,
+    CompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

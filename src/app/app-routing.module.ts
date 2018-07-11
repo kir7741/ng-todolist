@@ -9,7 +9,7 @@ import { appRoutePath } from './app-routing-path.const';
 
 const routes: Routes = [
   { path: '', redirectTo: '/' + appRoutePath.dashboard, pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: appRoutePath.dashboard, component: DashboardComponent },
   { path: '**', redirectTo:  '/' + appRoutePath.dashboard, pathMatch: 'full'}
 ];
 
